@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5wr-gu-ihe">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8191"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="zDb-GX-AqC">
+            <objects>
+                <tableViewController id="5wr-gu-ihe" customClass="TableViewController" customModule="sampletablereuse" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zy3-Ir-PNt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="dpe-l4-mpO" customClass="TableViewCell" customModule="sampletablereuse" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dpe-l4-mpO" id="Z9o-0I-d7S">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jh2-8R-vnX">
+                                            <rect key="frame" x="349" y="8" width="243" height="29"/>
+                                            <animations/>
+                                            <segments>
+                                                <segment title="First"/>
+                                                <segment title="Second"/>
+                                                <segment title="Third"/>
+                                                <segment title="Fourth"/>
+                                            </segments>
+                                        </segmentedControl>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9r-AP-r2Q">
+                                            <rect key="frame" x="8" y="14" width="42" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="c9r-AP-r2Q" firstAttribute="leading" secondItem="Z9o-0I-d7S" secondAttribute="leadingMargin" id="AZx-hq-3w2"/>
+                                        <constraint firstItem="jh2-8R-vnX" firstAttribute="top" secondItem="Z9o-0I-d7S" secondAttribute="topMargin" id="OyP-Pi-xlY"/>
+                                        <constraint firstItem="c9r-AP-r2Q" firstAttribute="bottom" secondItem="Z9o-0I-d7S" secondAttribute="bottomMargin" id="hLp-ju-3Wf"/>
+                                        <constraint firstItem="jh2-8R-vnX" firstAttribute="trailing" secondItem="Z9o-0I-d7S" secondAttribute="trailingMargin" id="loY-DV-bhc"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="_name" destination="c9r-AP-r2Q" id="1Jc-Qd-xvP"/>
+                                    <outlet property="_segmentedControl" destination="jh2-8R-vnX" id="N2T-46-SqU"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5wr-gu-ihe" id="gEL-MO-TyC"/>
+                            <outlet property="delegate" destination="5wr-gu-ihe" id="Aio-KZ-F4s"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DyC-up-Hqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="212" y="100"/>
+        </scene>
+    </scenes>
+</document>
