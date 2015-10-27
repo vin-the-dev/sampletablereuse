@@ -82,8 +82,17 @@ class TableViewController: UITableViewController {
         cell._segmentedControl.tag = indexPath.row
         
         cell._segmentedControl.addTarget(self, action: "updateRank:", forControlEvents: UIControlEvents.ValueChanged)
-
+        
+        let gesture = UISwipeGestureRecognizer(target: self, action: "handleGesture:")
+        gesture.direction = UISwipeGestureRecognizerDirection.Left
+        cell.addGestureRecognizer(gesture)
         return cell
+    }
+    
+    func handleGesture(sender: AnyObject){
+        let a = sender.view as! TableViewCell
+        a._segmentedControl.selectedSegmentIndex += 1
+        updateRank(a._segmentedControl)
     }
     
     func updateRank(sender: UISegmentedControl){
